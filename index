@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARAS FASHION - Luxury Women's Suits</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        dark: '#111111',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom Styles for Animations and Fixes */
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; }
+        
+        .hover-scale { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+        .hero-gradient { background: linear-gradient(to bottom, transparent, black, #D4AF37); opacity: 0.2; }
+        /* Navbar Styles */
+        .navbar { transition: all 0.3s ease; }
+        .navbar.scrolled { background-color: rgba(0, 0, 0, 0.9); backdrop-filter: blur(10px); }
+        /* Back to Top Button */
+        .back-to-top { opacity: 0; transition: all 0.3s ease; }
+        .back-to-top.visible { opacity: 1; }
+        /* Social Icons */
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar fixed top-0 w-full z-40 py-4">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-gold">KARAS FASHION</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-gold transition-colors">Home</a>
+                    <a href="#products" class="hover:text-gold transition-colors">Our Collection</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gold text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black z-30 hidden flex-col items-center justify-center space-y-8 text-xl">
+        <button id="closeMenuBtn" class="absolute top-6 right-6 text-2xl text-gold">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="hover:text-gold transition-colors">Home</a>
+        <a href="#products" class="hover:text-gold transition-colors">Our Collection</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="absolute inset-0 bg-black"></div>
+        <div class="text-center z-10 px-4">
+            <h1 class="text-6xl md:text-8xl font-bold uppercase tracking-widest mb-6 text-gold">
+                KARAS FASHION
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-8">
+                Luxury Women's Suits Collection 2025
+            </p>
+            <a href="#products" class="inline-block px-8 py-3 bg-gold text-black font-semibold rounded-full hover:bg-yellow-400 transition-colors">
+                Explore Collection
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#products" class="text-gold text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-12 bg-dark">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-semibold mb-8 text-gold">Follow Us</h2>
+            <div class="flex justify-center space-x-8 md:space-x-12">
+                <a href="https://www.instagram.com/karas.fashion.eg" target="_blank" class="social-icon text-4xl text-white hover:text-[#E1306C] transition-colors">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/karas.fashion.eg" target="_blank" class="social-icon text-4xl text-white hover:text-[#1877F2] transition-colors">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.tiktok.com/@karas.fashion.eg" target="_blank" class="social-icon text-4xl text-white hover:text-[#1DA1F2] transition-colors">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://wa.me/201022777725" target="_blank" class="social-icon text-4xl text-white hover:text-[#25D366] transition-colors">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - All Collections Merged -->
+    <section id="products" class="py-20 px-4 bg-black">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-semibold mb-16 text-center text-gold">
+                Our Luxury Collection
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="cursor-pointer hover-scale bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/557597311_795824216527758_5200993256284321666_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=MzczNDEwNjczNDU4OTAzNjE1OA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExNTJ4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=WPQMmAcDOqMQ7kNvwEPOm2U&_nc_oc=AdlqJudbikakBsn9syNAf5alvXwfGPWdLZSawjpHrlUlcviUvBKoi-j-H5dPXZtYOsE&_nc_ad=z-m&_nc_cid=1035&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=ESWEYXszGpZaOrwW0oTnfw&oh=00_AfctN2ToGRBib0uM_l9Qsg9pMAvFTT-L5KoiJBRoewGJwg&oe=68EEDB46" alt="Elegant Black Suit" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gold">Elegant Black Suit</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">$899</span>
+                            <span class="text-gray-400 text-sm">Code: KF-BS001</span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=201022777725&text=Hello%20KARAS%20FASHION!%20I%27m%20interested%20in%20the%20Elegant%20Black%20Suit%20(KF-BS001)%20for%20%24899" 
+                           target="_blank" 
+                           class="block w-full px-4 py-2 bg-gold text-black rounded-full text-sm hover:bg-yellow-400 transition-colors text-center">
+                            Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="cursor-pointer hover-scale bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/557593147_795822619861251_4997746999016655408_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzczNDEwNTQxMjY2MTgyMzE5OQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExNTJ4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=tw8PSf5_ApcQ7kNvwFCdPHV&_nc_oc=Adk0dvpBacWA7NPNTnVAPQysi1o3gW1jyR4zy-59qCOnjiMp4RX2sRIZi48jr-vYBRQ&_nc_ad=z-m&_nc_cid=1035&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=ESWEYXszGpZaOrwW0oTnfw&oh=00_AfcDAVeIa9VdJOHK4B_eI0TI9mSCdV0-_UNoqL8qKNqybQ&oe=68EEE008" alt="Modern Gray Ensemble" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gold">Modern Gray Ensemble</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">$950</span>
+                            <span class="text-gray-400 text-sm">Code: KF-MG002</span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=201022777725&text=Hello%20KARAS%20FASHION!%20I%27m%20interested%20in%20the%20Modern%20Gray%20Ensemble%20(KF-MG002)%20for%20%24950" 
+                           target="_blank" 
+                           class="block w-full px-4 py-2 bg-gold text-black rounded-full text-sm hover:bg-yellow-400 transition-colors text-center">
+                            Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="cursor-pointer hover-scale bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/547721655_779044638205716_8499904828348753966_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ig_cache_key=MzcxOTU4NzI2NTU2NDQzODc4MQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExNTJ4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=KxmCRS_gzJ8Q7kNvwExuT7i&_nc_oc=Adlz6yzrAMl0mc9P0HwgFzpRG-4scs-TYn0lbXhAMI2xSWHSSFont9E8IdfTM4c3yno&_nc_ad=z-m&_nc_cid=1035&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=ESWEYXszGpZaOrwW0oTnfw&oh=00_AfdMMkLoVKkmcnNrn1akP0uoGvyLmteF0dvo_6REiiVbzw&oe=68EEBF93" alt="Executive Navy Suit" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gold">Executive Navy Suit</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">$1,050</span>
+                            <span class="text-gray-400 text-sm">Code: KF-EN003</span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=201022777725&text=Hello%20KARAS%20FASHION!%20I%27m%20interested%20in%20the%20Executive%20Navy%20Suit%20(KF-EN003)%20for%20%241%2C050" 
+                           target="_blank" 
+                           class="block w-full px-4 py-2 bg-gold text-black rounded-full text-sm hover:bg-yellow-400 transition-colors text-center">
+                            Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="cursor-pointer hover-scale bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/540696725_770416409068539_2696282288827733409_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=MzcxMTYxNzY0NDM2Njc4MjgxNw%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExNTJ4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=od7A4zHHoNYQ7kNvwFLPg0S&_nc_oc=AdlvBWn4q1NzoXiFOQ0M_ww1d2OoGU3Ss_GkXgPV7nlJI1iDMXlDi_GmYk8TYZhy6_g&_nc_ad=z-m&_nc_cid=1035&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=ESWEYXszGpZaOrwW0oTnfw&oh=00_AffiuFvmxquzKZojt076KeLKEnEzhk6LTFsSmjsndmd9jw&oe=68EEDED5" alt="Evening Velvet Dress" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gold">Evening Velvet Dress</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">$1,200</span>
+                            <span class="text-gray-400 text-sm">Code: KF-EV004</span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=201022777725&text=Hello%20KARAS%20FASHION!%20I%27m%20interested%20in%20the%20Evening%20Velvet%20Dress%20(KF-EV004)%20for%20%241%2C200" 
+                           target="_blank" 
+                           class="block w-full px-4 py-2 bg-gold text-black rounded-full text-sm hover:bg-yellow-400 transition-colors text-center">
+                            Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="cursor-pointer hover-scale bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/540042057_770415749068605_1163451657845778534_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=MzcxMTYxNzA0Mzc1OTE5NjU5Nw%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExNTJ4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=dcb3DThnYxAQ7kNvwF5DycC&_nc_oc=AdkdqPHoHNGFHeXeSCWPEO5XxW2hAeYDyC1jFUx8U4WZXuoD5XHpwPnb0wOHBjIeZ9Y&_nc_ad=z-m&_nc_cid=1035&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=ESWEYXszGpZaOrwW0oTnfw&oh=00_AfcVkOueaVBVbI3Gg_784-6oQGsSvRDHBXblz9-p_hvY2A&oe=68EEBD27" alt="Chic White Blazer" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gold">Chic White Blazer</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">$850</span>
+                            <span class="text-gray-400 text-sm">Code: KF-CW005</span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=201022777725&text=Hello%20KARAS%20FASHION!%20I%27m%20interested%20in%20the%20Chic%20White%20Blazer%20(KF-CW005)%20for%20%24850" 
+                           target="_blank" 
+                           class="block w-full px-4 py-2 bg-gold text-black rounded-full text-sm hover:bg-yellow-400 transition-colors text-center">
+                            Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="cursor-pointer hover-scale bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/538198816_763345513108962_4548133674744156958_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=MzcwNTI2MjAwNDc5OTI4NDM5MA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExNTJ4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=OlWoXF4AUeYQ7kNvwHl3Py0&_nc_oc=AdmDFeyfhQz2mzoT21dQ2Osx9bTJymhrQreNmeiYJbJMb_Ph43P0iZImijNMjK5POi4&_nc_ad=z-m&_nc_cid=1035&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=ESWEYXszGpZaOrwW0oTnfw&oh=00_AffkGY21GsKE3gbbYgBCj8D6smadWUKmZyKLWiUYWyY1Yg&oe=68EEE7F3" alt="Burgundy Evening Gown" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gold">Burgundy Evening Gown</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">$1,350</span>
+                            <span class="text-gray-400 text-sm">Code: KF-BG006</span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=201022777725&text=Hello%20KARAS%20FASHION!%20I%27m%20interested%20in%20the%20Burgundy%20Evening%20Gown%20(KF-BG006)%20for%20%241%2C350" 
+                           target="_blank" 
+                           class="block w-full px-4 py-2 bg-gold text-black rounded-full text-sm hover:bg-yellow-400 transition-colors text-center">
+                            Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="cursor-pointer hover-scale bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/531611049_754242504019263_2780258439028727036_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=MzY5NzE4Nzk2NDU5OTEwODg3OA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExNTJ4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=vDOQB1UZnVEQ7kNvwGcPod4&_nc_oc=AdlmvlsWCXBUkOBoBXvltszO6gLAjfd8JQOb307W27kQL69kiRGFUWXICYq-xVifjxs&_nc_ad=z-m&_nc_cid=1035&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=a_Jb6FT-bJgIhky48GllOQ&oh=00_Afcnr0dOamB3XRdbRld1_Y8dx2S4Sk-XAjTwh8L2KLypZQ&oe=68EEE869" alt="Classic Tweed Set" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gold">Classic Tweed Set</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">$975</span>
+                            <span class="text-gray-400 text-sm">Code: KF-CT007</span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=201022777725&text=Hello%20KARAS%20FASHION!%20I%27m%20interested%20in%20the%20Classic%20Tweed%20Set%20(KF-CT007)%20for%20%24975" 
+                           target="_blank" 
+                           class="block w-full px-4 py-2 bg-gold text-black rounded-full text-sm hover:bg-yellow-400 transition-colors text-center">
+                            Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="cursor-pointer hover-scale bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/530470617_754243274019186_6915940586853732480_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ig_cache_key=MzY5NzE4ODYxNjUyODAzODE1OQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExNTJ4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=rOKAm_IQmGMQ7kNvwFV_Bek&_nc_oc=AdlyTNfdSqKkTCJVrcrnxWIBdIR1z4xc6AgC8Ig8hbpXwapoD7IElgC7l_ZgHDZeLqA&_nc_ad=z-m&_nc_cid=1035&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=a_Jb6FT-bJgIhky48GllOQ&oh=00_AffiFsg-5R6tVlB92hJ9-8hrJdOeXs7bE3u4mnSdtzq7XQ&oe=68EECCDE" alt="Silk Evening Dress" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gold">Silk Evening Dress</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">$1,100</span>
+                            <span class="text-gray-400 text-sm">Code: KF-SE008</span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=201022777725&text=Hello%20KARAS%20FASHION!%20I%27m%20interested%20in%20the%20Silk%20Evening%20Dress%20(KF-SE008)%20for%20%241%2C100" 
+                           target="_blank" 
+                           class="block w-full px-4 py-2 bg-gold text-black rounded-full text-sm hover:bg-yellow-400 transition-colors text-center">
+                            Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="cursor-pointer hover-scale bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/530244630_754240727352774_5446604694312662952_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ig_cache_key=MzY5NzE4NzA2MjUzODUxMzY3Ng%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExNTJ4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=19C7oAzTJl4Q7kNvwGIpG49&_nc_oc=AdnOrxmFMkXs8s4DwdxqxLGqUL-yM9necRHY4jXVrdyDv-hXZUxquIhRLiEUPik5IYs&_nc_ad=z-m&_nc_cid=1035&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=a_Jb6FT-bJgIhky48GllOQ&oh=00_Aff85E_qK1Q9FAcqSBOQRSqaIeIRV9m2IvrMFZ-p9AVT4Q&oe=68EECF5A" alt="Professional Pantsuit" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gold">Professional Pantsuit</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">$925</span>
+                            <span class="text-gray-400 text-sm">Code: KF-PP009</span>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=201022777725&text=Hello%20KARAS%20FASHION!%20I%27m%20interested%20in%20the%20Professional%20Pantsuit%20(KF-PP009)%20for%20%24925" 
+                           target="_blank" 
+                           class="block w-full px-4 py-2 bg-gold text-black rounded-full text-sm hover:bg-yellow-400 transition-colors text-center">
+                            Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 px-4 text-white text-center">
+        <div class="flex justify-center items-center space-x-6 mb-4">
+            <a href="https://www.instagram.com/karas.fashion.eg" target="_blank" class="social-icon text-2xl hover:text-[#E1306C] transition-colors">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/karas.fashion.eg" target="_blank" class="social-icon text-2xl hover:text-[#1877F2] transition-colors">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@karas.fashion.eg" target="_blank" class="social-icon text-2xl hover:text-[#1DA1F2] transition-colors">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=201022777725&text=Hello%20KARAS%20FASHION!%20I%20would%20like%20to%20inquire%20about%20your%20collection" target="_blank" class="social-icon text-2xl hover:text-[#25D366] transition-colors">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <p class="text-sm">
+            © 2025 KARAS FASHION | All Rights Reserved
+        </p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top fixed bottom-8 right-8 z-50 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center shadow-lg hover:bg-yellow-400 transition-colors">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Show/hide back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top functionality
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.remove('hidden');
+            document.getElementById('mobileMenu').classList.add('flex');
+        });
+
+        document.getElementById('closeMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.add('hidden');
+            document.getElementById('mobileMenu').classList.remove('flex');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                    document.getElementById('mobileMenu').classList.remove('flex');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
